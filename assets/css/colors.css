@@ -1,0 +1,47 @@
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.blue {
+    color: #1a8cff;
+}
+
+.comment {
+    color: #666;
+}
+
+
+/* 
+.micro {
+    color: #734d26;
+} */
+
+.macro {
+    color: rgb(16, 16, 202);
+    /* color: #6600cc; 
+    color: #55552b; */
+}
+
+.grey {
+    color: #773c57;
+}
+
+.yellow {
+    color: #cc6600;
+}
+
+.include {
+    color: #773c57;
+}

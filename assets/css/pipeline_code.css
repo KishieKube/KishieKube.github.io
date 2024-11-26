@@ -1,0 +1,39 @@
+.output-section {
+    padding: 5px;
+    /* background: #f1f2f3; */
+    background: rgba( 0, 122, 14, 0.1);
+}
+
+.code-section {
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background: #f1f2f3;
+}
+
+.code-section p {
+    white-space: pre-line;
+}
+
+p.code:before {
+    counter-reset: listing;
+}
+
+p.code code {
+    counter-increment: listing;
+    color: white;
+}
+
+p.code code::before {
+    content: counter(listing) ". ";
+    display: inline-block;
+    color: white;
+    /* color:yellow; */
+}
+
+fourtabs {
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    /* white-space: pre-wrap; */
+}
