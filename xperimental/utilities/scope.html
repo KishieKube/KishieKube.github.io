@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Pipeline</title>
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Nafis Ayaz">
+      <link rel="shortcut icon" href="favicon.ico">
+
+      <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+      <!-- FontAwesome JS -->
+      <script defer src="../../assets/fontawesome/js/all.js"></script>
+
+      <!-- Global CSS -->
+      <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
+
+      <!-- github calendar css -->
+      <link rel="stylesheet" href="../../assets/plugins/github-calendar/dist/github-calendar.css">
+      <!-- github activity css -->
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+      <link rel="stylesheet" href="../../assets/plugins/github-activity/github-activity-0.1.5.min.css">
+
+      <!-- Theme CSS -->
+      <link id="theme-style" rel="stylesheet" href="../../assets/css/xperimental.css">
+      <link id="theme-style" rel="stylesheet" href="../../assets/css/pipeline_code.css">
+      <link id="theme-style" rel="stylesheet" href="../../assets/css/colors.css">
+
+    </head>
+
+    <body>
+      <header class="menubar">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href = "/xperimental_lib.html">Xperimental Library</a></li>
+          <li class="list-inline-item"><a href = "/xperimental_lib.html">Zudoov AI</a></li>
+          <li class="list-inline-item"><a href = "/xperimental_lib.html">Espresso</a></li>
+        <ul>
+      </header>
+      <header class="header">
+          <div class="container clearfix">
+              <img class="profile-image img-fluid float-left rounded-circle" style="height:150px; width:150px" src="../../assets/images/me.svg" alt="profile image" />
+              <div class="profile-content float-left">
+                  <h1 class="name">Nafis Ayaz</h1>
+                  <h2 class="desc">C++ Software Engineer</h2>
+                  <ul class="social list-inline">
+                      <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                      <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt"></i></a></li>
+                      <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow"></i></a></li>
+                      <li class="list-inline-item last-item"><a href="#"><i class="fab fa-codepen"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </header>
+
+
+      <div class="container sections-wrapper">
+
+                  <section class="about section">
+                      <div class="section-inner shadow-sm rounded">
+                          <h1 class="heading">Scope Utilities </h1>
+                          <div class="content">
+                              <p>
+                                <li>Pipeline is a small and effective functionalities, written in C++17. rovides many pipeline functions that can be used in both C++ standard libraries like
+                                  <span> <a href = "https://en.cppreference.com/w/cpp/container/list" style = "color: #3AAA64; font-weight:300 italic"> std::list </a></span> ,
+                                  <span> <a href = "https://en.cppreference.com/w/cpp/container/vector" style = "color: #3AAA64; font-weight:300 italic"> std::vector </a></span> ,
+                                  and also xperimental datastructures like <span> <a href = "https://en.cppreference.com/w/cpp/container/vector" style = "color: #3AAA64; font-weight:300 italic"> xperimental::list_sm </a></span> ,
+                                  <span> <a href = "https://en.cppreference.com/w/cpp/container/vector" style = "color: #3AAA64; font-weight:300 italic"> xperimental::array_sm and so on. </a></span>.
+                                   It's fast and concise, increases industrial productivity.
+
+                              </p>
+                              <h4 class="subheading">Objectives are: </h4>
+                              <p>
+                                <li> Concise and yet readable </li>
+                                <li> Dynamic memory management </li>
+                                <li> Productivity </li>
+                              </p>
+                              <hr class="divider" />
+                          </div>
+
+
+                          <h4 class="subheading"> Scope:  </h4>
+                          <div class="content">
+                              <p>
+                                <li> <a href = "#"> xperimental::make_scope_exit</a> </li>
+                                <li> <a href = "#"> xperimental::cleanup</a> </li>
+                                <li> <a href = "#"> xperimental::smart_ptr</a> </li>
+                                <li> <a href = "#"> xperimental::make_smart_ptr</a> </li>
+                                <li> <a href = "#"> increament/decrement</a> </li>
+                                <li> <a href = "#"> single object version</a> </li>
+                              </p>
+
+                              <hr class="divider" />
+                          </div>
+
+<!-- =============================== CODE SECTION =============================== -->
+                          <div class="code-section">
+                              <p class = "code" >
+                                <code>    <span class="include">#include<span class="red"><<span>iostream<span>></span> </code>
+                                <code>    <span class="include">#include<span class="red"><<span>xperimental/scope/scope.h++<span>></span> </code>
+                                <code>    </code>
+                                <code>    <span class="green">int<span class="black">* test(){</span></code>
+                                <code>    &emsp;&emsp;<span class="green">int<span class="black">* n = <span class="yellow"> new <span class="green">int<span class="black">(<span class="red">100<span class="black">);</code>
+                                <code>    &emsp;&emsp;<span class="green">auto <span class="black">cleanup =  xperimental::make_scope_exit([&n]()<span class="green">mutable<span class="black">{ <span class="yellow">delete<span class="black"> n; n=<span class="red">nullptr<span class="black">; });</code>
+                                <code>    &emsp;&emsp;<span class="black">std::cout<< <span class="red">"m = "<span class="black"> << *m << <span class="red">"\n"<span class="black">;</code>
+                                <code>    &emsp;&emsp;<span class="yellow">return <span class="black"> n;</code>
+                                <code>    <span class="black">}<span class="blue">// deletes the pointer when it goes out of scope</code>
+                                <code></code>
+                                <code>    <span class="green">int <span class="black">main(){</span></code>
+                                <code>    &emsp;&emsp;<span class="green">int<span class="black">* m = test();  <span class="blue"> // Runtime error</code>
+                                <code>    <span class="black">}</code>
+                              </p>
+                            </div>
+<!-- ======================================== Explanations========================================= -->
+                            <div class="content">
+                                <p> Output: </p>
+                            </div>
+                            <div class="output-section">
+                              <p> n = 100 </p>
+                            </div>
+
+                            <div class="content">
+                              <p>
+                                  xperimental::from is applicable of any primitive data-types: int , float, std::string and xperimental datastructures like: xperimental::array of any data-type, xperimental::filter and
+                                  xperimental::transform can take Lambda expression and Callable object that creates objects if there is no further pipe after that otherwise return data. Returned result is xperimental::array<<span class="green">int<span class="black">>
+
+                              </p>
+                            </div>
+                            <div class="code-section">
+                                <p class = "code" >
+                                  <code>    <span class="include">#include<span class="red"><<span>iostream<span>></span> </code>
+                                  <code>    <span class="include">#include<span class="red"><<span>xperimental/scope/scope.h++<span>></span> </code>
+                                  <code>    </code>
+                                  <code>    <span class="green">int<span class="black">* test(){</span></code>
+                                  <code>    &emsp;&emsp;<span class="green">int<span class="black">* n = <span class="yellow"> new <span class="green">int<span class="black">(<span class="red">100<span class="black">);</code>
+                                  <code>    &emsp;&emsp;<span class="green">auto <span class="black">cleanup =  xperimental::cleanup(n);</code>
+                                  <code>    &emsp;&emsp;<span class="black">std::cout<< <span class="red">"n = "<span class="black"> << *n << <span class="red">"\n"<span class="black">;</code>
+                                  <code>    &emsp;&emsp;<span class="yellow">return <span class="black"> n;</code>
+                                  <code>    <span class="black">}<span class="blue">// deletes the pointer when it goes out of scope </code>
+                                  <code></code>
+                                  <code>    <span class="green">int <span class="black">main(){</span></code>
+                                  <code>    &emsp;&emsp;<span class="green">int<span class="black">* m = test(); <span class="blue"> // Runtime error</code>
+                                  <code>    <span class="black">}</code>
+                                </p>
+                              </div>
+                            <!-- ======================================== Explanations========================================= -->
+                              <div class="content">
+                                  <p> Output: </p>
+                              </div>
+                              <div class="output-section">
+                                <p> n = 100 </p>
+                              </div>
+
+                              <div class="content">
+                                <p>
+                                    xperimental::from is applicable of any primitive data-types: int , float, std::string and xperimental datastructures like: xperimental::array of any data-type, xperimental::filter and
+                                    xperimental::transform can take Lambda expression and Callable object that creates objects if there is no further pipe after that otherwise return data. Returned result is xperimental::array<<span class="green">int<span class="black">>
+
+                                </p>
+                              </div>
+
+                              <div class="code-section">
+                                  <p class = "code" >
+                                    <code>    <span class="include">#include<span class="red"><<span>iostream<span>></span> </code>
+                                    <code>    <span class="include">#include<span class="red"><<span>xperimental/scope/smart_ptr.h++<span>></span> </code>
+                                    <code>    </code>
+                                    <code>    <span class="green">int<span class="black"> main(){</span></code>
+                                    <code>    &emsp;&emsp;<span class="green">auto <span class="black">ptr =  xperimental::make_smart_ptr(new int(100));</code>
+                                    <code>    &emsp;&emsp;<span class="black">std::cout<< <span class="red">"value = "<span class="black"> << ptr << <span class="red">"\n"<span class="black">;</code>
+                                    <code>    &emsp;&emsp;<span class="black">ptr = <span class="red">20<span class="black">; </code>
+                                    <code>    &emsp;&emsp;<span class="black">std::cout<< <span class="red">"value = "<span class="black"> << ptr << <span class="red">"\n"<span class="black">;</code>
+                                    <code>    &emsp;&emsp;<span class="black">++ptr; </code>
+                                    <code>    &emsp;&emsp;<span class="black">std::cout<< <span class="red">"value = "<span class="black"> << ptr << <span class="red">"\n"<span class="black">;</code>
+                                    <code>    <span class="black">}<span class="blue">// deletes the pointer when it goes out of scope </code>
+                                    <code></code>
+                                  </p>
+                                </div>
+                              <!-- ======================================== Explanations========================================= -->
+                                <div class="content">
+                                    <p> Output: </p>
+                                </div>
+                                <div class="output-section">
+                                  <p> value = 100 </p>
+                                  <p> value = 20 </p>
+                                  <p> value = 21 </p>
+                                </div>
+
+                                <div class="content">
+                                  <p>
+                                      xperimental::from is applicable of any primitive data-types: int , float, std::string and xperimental datastructures like: xperimental::array of any data-type, xperimental::filter and
+                                      xperimental::transform can take Lambda expression and Callable object that creates objects if there is no further pipe after that otherwise return data. Returned result is xperimental::array<<span class="green">int<span class="black">>
+
+                                  </p>
+                                </div>
+
+                      </div>
+                  </section>
+            </div>
+
+
+
+<!-- ===============================FOOTER =============================== -->
+            <footer class="footer">
+                <div class="container text-center">
+                        <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+                        <small class="copyright">Designed by Nafis Ayaz</small>
+                </div><!--//container-->
+            </footer><!--//footer-->
+
+    </body>
+
+</html>
