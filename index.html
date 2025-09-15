@@ -3,272 +3,1292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishore Lenka - Portfolio</title>
+    <title>Kishore Lenka - AI Solutions Leader & Program Manager</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #000000; /* Black background */
-            color: #ffffff; /* White text color for readability */
+            box-sizing: border-box;
         }
-        header {
-            color: white;
-            padding: 20px;
-            text-align: center;
-            background-image: url('pics/banner1.jpeg'); /* Replace with the path of your image */
-            background-size: cover;
-            background-position: center;
-            height: 150px; /* Adjust the height of the header as needed */
+
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #1e293b;
+            --accent-color: #3b82f6;
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            --text-light: #f1f5f9;
+            --text-gray: #94a3b8;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --border-color: rgba(59, 130, 246, 0.2);
         }
-        header h1 {
-            margin: 0;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-color);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        .profile-container {
-            display: flex;
-            justify-content: top;
-            align-items: top;
-            margin-top: 30px;
+
+        /* Background Animation */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
         }
-        .profile-text {
-            flex: 1;
-            text-align: left;
-            padding: 20px;
-            background-color: #2c3e50; /* Dark grey box */
-            border-radius: 10px;
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(20px);
+            background: rgba(15, 23, 42, 0.9);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
         }
-        .profile-text h2 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: #ecf0f1; /* Light grey font */
-        }
-        .profile-text p {
-            font-size: 1.2rem;
-            color: #bdc3c7; /* Light grey for better readability */
-        }
-        .profile-image {
-            flex: 1;
-            text-align: center;
-        }
-        .profile-image img {
-            width: auto;
-            height: 100%; /* Adjust height proportionally */
-            max-height: 400px; /* Maximum height control */
-            object-fit: cover;
-            border-radius: 10px;
-            border: 4px solid #ecf0f1;
-        }
-        .about-container {
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
-            margin-top: 30px;
+            align-items: center;
         }
-        .about-container .about-text {
-            flex: 2;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #bdc3c7; /* Light grey for text */
-            background-color: #2c3e50; /* Dark grey box */
-            border-radius: 10px;
-            padding: 20px;
-        }
-        .about-container .about-photo {
-            flex: 1;
-            text-align: center;
-        }
-        .about-container .about-photo img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-        }
-        .section-title {
-            font-size: 2rem;
-            color: #ecf0f1; /* Light grey */
-            margin: 40px 0 10px;
-            text-align: center;
-        }
-        .skills, .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 40px;
-        }
-        .skills .skill, .projects .project {
-            background-color: #34495e; /* Dark grey box */
-            margin: 10px;
-            padding: 20px;
-            border-radius: 8px;
-            width: 250px;
-            text-align: center;
-        }
-        .skills .skill h3, .projects .project h3 {
-            color: #ecf0f1; /* Light grey text */
-        }
-        /* Updated CSS for project images */
-        .projects .project img {
-            width: 100%; /* Ensure the images are the same width */
-            height: 200px; /* Set the height to a fixed value */
-            object-fit: cover; /* Make sure the images are cropped proportionally */
-            border-radius: 8px; /* Optional: add rounded corners */
-        }
-        footer {
-            color: white;
-            padding: 10px;
-            text-align: center;
-            background-image: url('pics/banner1.jpeg'); /* Replace with the path of your image */
-            background-size: cover;
-            background-position: center;
-            height: 5px; /* Adjust the height of the footer */
-        }
-        .about-me-list {
-            list-style-type: disc;
-            padding-left: 20px; /* Indentation for the bullet points */
-            margin-top: 20px; /* Space before the list starts */
-        }
-        .about-me-list li {
-            margin-bottom: 20px; /* Adds space between each bullet point */
-            line-height: 1.6; /* Adds line spacing for better readability */
-            font-size: 1.1rem; /* Optional, can adjust as needed */
-        }
-        .about-me-list li strong {
+
+        .logo {
+            font-size: 1.5rem;
             font-weight: bold;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        .btn {
-            padding: 15px 25px;
-            font-size: 16px;
-            border-radius: 8px;
-            background-color: #007bff;
-            color: white;
-            border: none;
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
             cursor: pointer;
         }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--accent-color);
+        }
+
         .btn:hover {
-            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            margin-top: 0.5rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent-gradient);
+        }
+
+        .experience-item {
+            position: relative;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+            border-color: var(--accent-color);
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 2rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .experience-role {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--text-light);
+        }
+
+        .experience-company {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .experience-duration {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+        }
+
+        .experience-description {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .experience-achievements {
+            list-style: none;
+        }
+
+        .experience-achievements li {
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .experience-achievements li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .project-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(139, 92, 246, 0.1);
+            color: #8b5cf6;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+        }
+
+        .contact-item i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer p {
+            color: var(--text-gray);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-timeline {
+                padding-left: 1rem;
+            }
+
+            .experience-item {
+                margin-left: 1rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
+    <div class="bg-animation"></div>
 
-<header>
-    <h1>Kishore Lenka</h1>
-    <p>Senior Technical Project Manager</p>
-</header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Kishore Lenka</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<div class="profile-container">
-    <div class="profile-text">
-        <h2>About Me</h2>
-        <ul class="about-me-list">
-            <li>Experienced <strong>Senior Technical Project Manager:</strong> With over 18 years of experience in managing high-impact projects, including extensive experience in telecommunications and networking technologies.</li>
-            <li><strong>Focus on Emerging Technologies:</strong> Currently specializing in GenAI, particularly in computer vision and natural language processing (NLP), while continuously exploring innovative ways to integrate these technologies into real-world solutions.</li>
-            <li><strong>Passionate About Technology and Business:</strong> Enthusiastic about bridging the gap between technology and business, I thrive in dynamic environments, leading teams to drive success, and always seeking to optimize processes and results.</li>
-        </ul>
-    </div>
-    <div class="profile-image">
-        <img src="pics/ProfilePic3.jpeg" alt="Kishore Lenka">
-    </div>
-</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1 class="hero-title">AI Solutions Leader & Program Manager</h1>
+            <p class="hero-subtitle">Transforming businesses through Generative AI, Cloud Technologies & Strategic Program Delivery</p>
+            <p class="hero-description">
+                Accomplished Senior Manager with extensive experience in AI-driven transformation, 
+                program delivery, and telecommunications. Specialized in leveraging Generative AI, 
+                LLMs, and cloud technologies to drive innovation and deliver exceptional results.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+                <a href="https://github.com/kishiekube" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="section-title">Skills</div>
-<div class="skills">
-    <div class="skill">
-        <h3>PROJECT MANAGEMENT</h3>
-        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-            <li>PMP, CSM, GENAI</li>
-        </ul>
-    </div>
-    <div class="skill">
-        <h3>GENERATIVE AI</h3>
-        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-            <li>ML, DL, Computer Vision, NLP</li>
-        </ul>
-    </div>
-    <div class="skill">
-        <h3>DEVELOPMENT</h3>
-        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-            <li>Python, C, C++, SQL, Linux</li>
-        </ul>
-    </div>
-    <div class="skill">
-        <h3>TECHNOLOGY</h3>
-        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-            <li>TCP/IP, Network Security, VoIP, VoLTE, 5G NR and 5G Core</li>
-        </ul>
-    </div>
-    <div class="skill">
-        <h3>Cloud Technologies</h3>
-        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-            <li>AWS</li>
-        </ul>
-    </div>
-</div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <p>
+                    As a highly accomplished Senior Manager, I bring extensive experience in program delivery, 
+                    AI-driven transformation, and telecommunications solutions. My expertise spans across 
+                    Generative AI integration, cloud migration, and strategic program management.
+                </p>
+                <p>
+                    I have successfully led transformative projects for major clients including Avid Technologies, 
+                    Samsung Korea, and Verizon USA, achieving remarkable efficiency improvements and customer 
+                    satisfaction scores. My technical proficiency includes AI automation tools like LangChain, 
+                    CrewAI, and comprehensive cloud platforms.
+                </p>
+                <p>
+                    With a passion for innovation and a track record of delivering results, I specialize in 
+                    modernizing content platforms through strategic AI integration and ensuring robust, 
+                    secure networking solutions across diverse product lines.
+                </p>
+            </div>
+            <div class="stats fade-in">
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Efficiency Boost with AI</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20%</div>
+                    <div class="stat-label">Delivery Improvement</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100M+</div>
+                    <div class="stat-label">Dollar Projects Led</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="section-title">Projects</div>
-<div class="projects">
-    <div class="project">
-        <h3>AI-based Application</h3>
-        <ul style="list-style: none; padding: 0; margin: 10px 0;">
-            <li>Computer Vision based day-and-night-detector</li>
-        </ul>
-        <img src="pics/daynight.jpeg" alt="Project 1">
-    </div>
-	<div class="project">
-        <h3>5G Compact Core</h3>
-        <ul style="list-style: none; padding: 0; margin: 10px 0;">
-            <li>Solution integration management of 5G core solution</li>
-        </ul>
-        <img src="pics/5g.jpeg" alt="Project 2">
-    </div>
-    <div class="project">
-        <h3>Cloud Migration</h3>
-        <ul style="list-style: none; padding: 0; margin: 10px 0;">
-            <li>Migration of Freeswitch server into AWS Cloud</li>
-        </ul>
-        <img src="pics/cloudMigration.jpeg" alt="Project 2">
-    </div>
-    <div class="project">
-        <h3>SBC and BGF</h3>
-        <ul style="list-style: none; padding: 0; margin: 10px 0;">
-            <li>Ericson Border Gateway Function (BGF) and Session Border Controller (SBC)</li>
-        </ul>
-        <img src="pics/sbc.png" alt="Project 3">
-    </div>
-    <div class="project">
-        <h3>Network Security Enhancement</h3>
-        <ul style="list-style: none; padding: 0; margin: 10px 0;">
-            <li>IKEv2 implementation and integration - ADTRAN ROUTER</li>
-        </ul>
-        <img src="pics/NetworkSecurity.jpeg" alt="Project 4">
-    </div>
-</div>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title fade-in">Core Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-robot"></i> AI & Machine Learning</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Generative AI</span>
+                    <span class="skill-tag">LLMs</span>
+                    <span class="skill-tag">LangChain</span>
+                    <span class="skill-tag">CrewAI</span>
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">AI Automation</span>
+                    <span class="skill-tag">n8n</span>
+                    <span class="skill-tag">Make.ai</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-cloud"></i> Cloud Technologies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">GCP</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Red Hat OCP</span>
+                    <span class="skill-tag">Containers</span>
+                    <span class="skill-tag">Grafana</span>
+                    <span class="skill-tag">Cloud Migration</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-project-diagram"></i> Program Management</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Strategic Planning</span>
+                    <span class="skill-tag">Stakeholder Management</span>
+                    <span class="skill-tag">Budget Management</span>
+                    <span class="skill-tag">Risk Assessment</span>
+                    <span class="skill-tag">Agile/Scrum</span>
+                    <span class="skill-tag">Program Governance</span>
+                    <span class="skill-tag">Resource Allocation</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-network-wired"></i> Telecommunications</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">5G Solutions</span>
+                    <span class="skill-tag">VoIP</span>
+                    <span class="skill-tag">FreeSWITCH</span>
+                    <span class="skill-tag">Asterisk</span>
+                    <span class="skill-tag">Kamailio</span>
+                    <span class="skill-tag">OpenSIPS</span>
+                    <span class="skill-tag">VoLTE</span>
+                    <span class="skill-tag">IPSec IKEv2</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">JIRA</span>
+                    <span class="skill-tag">Confluence</span>
+                    <span class="skill-tag">MS Project</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">SharePoint</span>
+                    <span class="skill-tag">Teams</span>
+                    <span class="skill-tag">Slack</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-handshake"></i> Leadership & Soft Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Problem-solving</span>
+                    <span class="skill-tag">Collaboration</span>
+                    <span class="skill-tag">Adaptability</span>
+                    <span class="skill-tag">Strategic Thinking</span>
+                    <span class="skill-tag">Negotiation</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div style="text-align: center; margin-bottom: 30px;">
-    <button 
-        class="btn btn-cta-secondary" 
-        style="padding: 15px 25px; font-size: 16px; border-radius: 8px; background-color: #007bff; color: white; border: none; cursor: pointer;"
-        onclick="window.location.href='https://github.com/KishieKube?tab=repositories';"
-    >
-        More on Github <i class="fas fa-chevron-right" style="padding-left: 5px;"></i>
-    </button>
-</div>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2 class="section-title fade-in">Professional Experience</h2>
+        <div class="experience-timeline">
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-role">Program Manager - Delivery</div>
+                        <div class="experience-company">Encora Innovation Lab, Bangalore</div>
+                    </div>
+                    <div class="experience-duration">Mar 2024 - Present</div>
+                </div>
+                <p class="experience-description">
+                    Leading program delivery with focus on AI integration, secure networking, and stakeholder governance.
+                </p>
+                <ul class="experience-achievements">
+                    <li>Led program delivery for Avid Technologies, enhancing AVID Media Composer with Generative AI integration</li>
+                    <li>Orchestrated AI-driven video semantic search and speaker recognitions integration, realizing a 95% increase in operational efficiency</li>
+                    <li>Directed IPSec IKEv2 integration into ADTRAN OS across various product lines</li>
+                    <li>Enhanced delivery predictability by 20% through stakeholder cadences and governance models</li>
+                </ul>
+            </div>
 
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-role">Project Manager - Telecom & Voice Solutions</div>
+                        <div class="experience-company">Ecosmob Technologies, Ahmedabad</div>
+                    </div>
+                    <div class="experience-duration">Feb 2022 - Nov 2023</div>
+                </div>
+                <p class="experience-description">
+                    Managed comprehensive VoIP/Telecom projects with focus on governance structures and customer satisfaction.
+                </p>
+                <ul class="experience-achievements">
+                    <li>Delivered diverse VoIP/Telecom solutions using FreeSWITCH, Asterisk, Kamailio, and OpenSIPS</li>
+                    <li>Achieved 20% improvement in customer satisfaction through quality-controlled delivery processes</li>
+                    <li>Contributed to multi-million dollar client acquisitions with technical solution inputs</li>
+                    <li>Successfully managed migration of on-premise FreeSWITCH servers to AWS cloud</li>
+                </ul>
+            </div>
 
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-role">Sr. Technical Manager - 5G Solutions Integration</div>
+                        <div class="experience-company">Alepo Technologies, Mumbai</div>
+                    </div>
+                    <div class="experience-duration">Feb 2021 - Feb 2022</div>
+                </div>
+                <p class="experience-description">
+                    Spearheaded 5G solution integration and deployment for major clients including Samsung Korea and Verizon USA.
+                </p>
+                <ul class="experience-achievements">
+                    <li>Led deployment of 5G compact core components (AuSF, UDM, UDR, PCF, PCRF, AMF)</li>
+                    <li>Oversaw deployments across AWS, Kubernetes, Windriver Cloud, and Red Hat OpenShift</li>
+                    <li>Improved on-time delivery by 20% through effective IoT/SVT testing coordination</li>
+                    <li>Achieved 95% on-time delivery for 5G compact core deployments in cloud environments</li>
+                </ul>
+            </div>
 
-<footer style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100px; background-color: #f4f4f4; text-align: center; padding: 10px; line-height: 1.6;">
-    <p style="margin: 0; font-size: 18px; font-weight: bold;">Contact Me</p>
-    <ul style="list-style: none; padding: 0; margin: 10px 0; text-align: center;">
-        <li>kishore.lenka@gmail.com</li>
-        <li>
-            LinkedIn: 
-            <a href="https://www.linkedin.com/in/kishorelenka" target="_blank" style="text-decoration: none; color: #007bff;">
-                KishoreLenka
-            </a>
-        </li>
-    </ul>
-</footer>
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-role">Project Manager - System Software & R&D</div>
+                        <div class="experience-company">Sasken Technologies, Bangalore</div>
+                    </div>
+                    <div class="experience-duration">May 2017 - Feb 2021</div>
+                </div>
+                <p class="experience-description">
+                    Managed comprehensive programs focused on Mobile Satellite Terminals and Terrestrial Terminal Applications.
+                </p>
+                <ul class="experience-achievements">
+                    <li>Successfully delivered Mobile Satellite Equipment and Terrestrial Terminal Application programs</li>
+                    <li>Oversaw firmware development with rigorous hardware validation and software integration</li>
+                    <li>Optimized resource allocation and budgeting to meet project objectives</li>
+                    <li>Implemented streamlined firmware development processes</li>
+                </ul>
+            </div>
 
-<footer>
-    <p>Contact: Kishore Lenka</p>
-</footer>
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-role">Technical Leader / Manager</div>
+                        <div class="experience-company">HCL Technologies</div>
+                    </div>
+                    <div class="experience-duration">May 2010 - May 2017</div>
+                </div>
+                <p class="experience-description">
+                    Led technical teams in Routing, Switching, SBC, BGF and VoLTE projects with Ericsson & Intel partnerships.
+                </p>
+                <ul class="experience-achievements">
+                    <li>Provided technical leadership for network optimization and enhancement projects</li>
+                    <li>Successfully collaborated with Ericsson and Intel on strategic initiatives</li>
+                    <li>Managed development of optimized network solutions</li>
+                    <li>Enhanced team capabilities in routing, switching, and telecom technologies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title fade-in">Key Projects & Achievements</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">AI-Powered Content Management Platform</h3>
+                    <p class="project-description">
+                        Led the integration of Generative AI into Avid Media Composer, implementing semantic NLP 
+                        and AI-driven search capabilities that resulted in 95% efficiency improvement.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Generative AI</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Semantic Search</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">Content Management</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            More on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">5G Core Network Deployment</h3>
+                    <p class="project-description">
+                        Orchestrated deployment of 5G compact core components for Samsung Korea & Verizon USA 
+                        across multiple cloud platforms, achieving 95% on-time delivery rate.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">5G Core</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Red Hat OCP</span>
+                        <span class="tech-tag">Network Functions</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            More on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">Cloud Migration & VoIP Solutions</h3>
+                    <p class="project-description">
+                        Successfully migrated on-premise FreeSWITCH servers with customer databases to AWS cloud, 
+                        improving system reliability and scalability for telecom clients.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AWS Cloud</span>
+                        <span class="tech-tag">FreeSWITCH</span>
+                        <span class="tech-tag">VoIP</span>
+                        <span class="tech-tag">Migration</span>
+                        <span class="tech-tag">Database</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            More on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">AI Automation Framework</h3>
+                    <p class="project-description">
+                        Developed comprehensive AI automation solutions using LangChain, CrewAI, and workflow 
+                        automation tools to streamline business processes and improve operational efficiency.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">CrewAI</span>
+                        <span class="tech-tag">n8n</span>
+                        <span class="tech-tag">Make.ai</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            More on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">Secure Network Integration</h3>
+                    <p class="project-description">
+                        Directed the integration of IPSec IKEv2 into ADTRAN OS across various product lines, 
+                        ensuring robust and secure networking capabilities for enterprise clients.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">IPSec IKEv2</span>
+                        <span class="tech-tag">Network Security</span>
+                        <span class="tech-tag">ADTRAN OS</span>
+                        <span class="tech-tag">Integration</span>
+                        <span class="tech-tag">Enterprise</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            More on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">Mobile Satellite Terminal Systems</h3>
+                    <p class="project-description">
+                        Managed end-to-end development of Mobile Satellite Equipment and Terrestrial Terminal 
+                        Applications with focus on firmware optimization and hardware-software integration.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Satellite Systems</span>
+                        <span class="tech-tag">Firmware</span>
+                        <span class="tech-tag">Embedded Systems</span>
+                        <span class="tech-tag">Hardware Integration</span>
+                        <span class="tech-tag">Mobile Terminals</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            More on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title fade-in">Let's Connect</h2>
+        <div class="contact-content">
+            <div class="contact-info fade-in">
+                <h3 style="margin-bottom: 1.5rem; color: var(--accent-color);">Get In Touch</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:kishore.lenka@gmail.com">kishore.lenka@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+919611500600">+91-9611500600</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bangalore, Karnataka, India</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/kishorelenka" target="_blank">linkedin.com/in/kishorelenka</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/kishiekube" target="_blank">github.com/kishiekube</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kishorelenka" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/kishiekube" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:kishore.lenka@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form fade-in">
+                <h3 style="margin-bottom: 1.5rem; color: var(--accent-color);">Send a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <p>&copy; 2024 Kishore Lenka. All rights reserved. | AI Solutions Leader & Program Manager</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Contact form handling
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Create mailto link
+            const mailtoLink = `mailto:kishore.lenka@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            window.location.href = mailtoLink;
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    if (navLink) {
+                        navLink.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect when page loads
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('.hero-title');
+            const originalText = heroTitle.textContent;
+            setTimeout(() => {
+                typeWriter(heroTitle, originalText, 50);
+            }, 1000);
+        });
+
+        // Add additional mobile menu styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @media (max-width: 768px) {
+                .nav-links.active {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background: rgba(15, 23, 42, 0.95);
+                    backdrop-filter: blur(20px);
+                    padding: 2rem;
+                    border-bottom: 1px solid var(--border-color);
+                }
+                
+                .mobile-menu.active span:nth-child(1) {
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+                
+                .mobile-menu.active span:nth-child(2) {
+                    opacity: 0;
+                }
+                
+                .mobile-menu.active span:nth-child(3) {
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+            }
+            
+            .nav-links a.active {
+                color: var(--accent-color);
+            }
+            
+            .nav-links a.active::after {
+                width: 100%;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>

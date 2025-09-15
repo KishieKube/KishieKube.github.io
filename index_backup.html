@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishore Lenka - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text color for readability */
+        }
+        header {
+            color: white;
+            padding: 20px;
+            text-align: center;
+            background-image: url('pics/banner1.jpeg'); /* Replace with the path of your image */
+            background-size: cover;
+            background-position: center;
+            height: 150px; /* Adjust the height of the header as needed */
+        }
+        header h1 {
+            margin: 0;
+        }
+        .profile-container {
+            display: flex;
+            justify-content: top;
+            align-items: top;
+            margin-top: 30px;
+        }
+        .profile-text {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+            background-color: #2c3e50; /* Dark grey box */
+            border-radius: 10px;
+        }
+        .profile-text h2 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #ecf0f1; /* Light grey font */
+        }
+        .profile-text p {
+            font-size: 1.2rem;
+            color: #bdc3c7; /* Light grey for better readability */
+        }
+        .profile-image {
+            flex: 1;
+            text-align: center;
+        }
+        .profile-image img {
+            width: auto;
+            height: 100%; /* Adjust height proportionally */
+            max-height: 400px; /* Maximum height control */
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid #ecf0f1;
+        }
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .about-container .about-text {
+            flex: 2;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #bdc3c7; /* Light grey for text */
+            background-color: #2c3e50; /* Dark grey box */
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .about-container .about-photo {
+            flex: 1;
+            text-align: center;
+        }
+        .about-container .about-photo img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #ecf0f1; /* Light grey */
+            margin: 40px 0 10px;
+            text-align: center;
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .skills .skill, .projects .project {
+            background-color: #34495e; /* Dark grey box */
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+        }
+        .skills .skill h3, .projects .project h3 {
+            color: #ecf0f1; /* Light grey text */
+        }
+        /* Updated CSS for project images */
+        .projects .project img {
+            width: 100%; /* Ensure the images are the same width */
+            height: 200px; /* Set the height to a fixed value */
+            object-fit: cover; /* Make sure the images are cropped proportionally */
+            border-radius: 8px; /* Optional: add rounded corners */
+        }
+        footer {
+            color: white;
+            padding: 10px;
+            text-align: center;
+            background-image: url('pics/banner1.jpeg'); /* Replace with the path of your image */
+            background-size: cover;
+            background-position: center;
+            height: 5px; /* Adjust the height of the footer */
+        }
+        .about-me-list {
+            list-style-type: disc;
+            padding-left: 20px; /* Indentation for the bullet points */
+            margin-top: 20px; /* Space before the list starts */
+        }
+        .about-me-list li {
+            margin-bottom: 20px; /* Adds space between each bullet point */
+            line-height: 1.6; /* Adds line spacing for better readability */
+            font-size: 1.1rem; /* Optional, can adjust as needed */
+        }
+        .about-me-list li strong {
+            font-weight: bold;
+        }
+        .btn {
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kishore Lenka</h1>
+    <p>Senior Technical Project Manager</p>
+</header>
+
+<div class="profile-container">
+    <div class="profile-text">
+        <h2>About Me</h2>
+        <ul class="about-me-list">
+            <li>Experienced <strong>Senior Technical Project Manager:</strong> With over 18 years of experience in managing high-impact projects, including extensive experience in telecommunications and networking technologies.</li>
+            <li><strong>Focus on Emerging Technologies:</strong> Currently specializing in GenAI, particularly in computer vision and natural language processing (NLP), while continuously exploring innovative ways to integrate these technologies into real-world solutions.</li>
+            <li><strong>Passionate About Technology and Business:</strong> Enthusiastic about bridging the gap between technology and business, I thrive in dynamic environments, leading teams to drive success, and always seeking to optimize processes and results.</li>
+        </ul>
+    </div>
+    <div class="profile-image">
+        <img src="pics/ProfilePic3.jpeg" alt="Kishore Lenka">
+    </div>
+</div>
+
+<div class="section-title">Skills</div>
+<div class="skills">
+    <div class="skill">
+        <h3>PROJECT MANAGEMENT</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+            <li>PMP, CSM, GENAI</li>
+        </ul>
+    </div>
+    <div class="skill">
+        <h3>GENERATIVE AI</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+            <li>ML, DL, Computer Vision, NLP</li>
+        </ul>
+    </div>
+    <div class="skill">
+        <h3>DEVELOPMENT</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+            <li>Python, C, C++, SQL, Linux</li>
+        </ul>
+    </div>
+    <div class="skill">
+        <h3>TECHNOLOGY</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+            <li>TCP/IP, Network Security, VoIP, VoLTE, 5G NR and 5G Core</li>
+        </ul>
+    </div>
+    <div class="skill">
+        <h3>Cloud Technologies</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+            <li>AWS</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section-title">Projects</div>
+<div class="projects">
+    <div class="project">
+        <h3>AI-based Application</h3>
+        <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            <li>Computer Vision based day-and-night-detector</li>
+        </ul>
+        <img src="pics/daynight.jpeg" alt="Project 1">
+    </div>
+	<div class="project">
+        <h3>5G Compact Core</h3>
+        <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            <li>Solution integration management of 5G core solution</li>
+        </ul>
+        <img src="pics/5g.jpeg" alt="Project 2">
+    </div>
+    <div class="project">
+        <h3>Cloud Migration</h3>
+        <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            <li>Migration of Freeswitch server into AWS Cloud</li>
+        </ul>
+        <img src="pics/cloudMigration.jpeg" alt="Project 2">
+    </div>
+    <div class="project">
+        <h3>SBC and BGF</h3>
+        <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            <li>Ericson Border Gateway Function (BGF) and Session Border Controller (SBC)</li>
+        </ul>
+        <img src="pics/sbc.png" alt="Project 3">
+    </div>
+    <div class="project">
+        <h3>Network Security Enhancement</h3>
+        <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            <li>IKEv2 implementation and integration - ADTRAN ROUTER</li>
+        </ul>
+        <img src="pics/NetworkSecurity.jpeg" alt="Project 4">
+    </div>
+</div>
+
+<div style="text-align: center; margin-bottom: 30px;">
+    <button 
+        class="btn btn-cta-secondary" 
+        style="padding: 15px 25px; font-size: 16px; border-radius: 8px; background-color: #007bff; color: white; border: none; cursor: pointer;"
+        onclick="window.location.href='https://github.com/KishieKube?tab=repositories';"
+    >
+        More on Github <i class="fas fa-chevron-right" style="padding-left: 5px;"></i>
+    </button>
+</div>
+
+
+
+<footer style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100px; background-color: #f4f4f4; text-align: center; padding: 10px; line-height: 1.6;">
+    <p style="margin: 0; font-size: 18px; font-weight: bold;">Contact Me</p>
+    <ul style="list-style: none; padding: 0; margin: 10px 0; text-align: center;">
+        <li>kishore.lenka@gmail.com</li>
+        <li>
+            LinkedIn: 
+            <a href="https://www.linkedin.com/in/kishorelenka" target="_blank" style="text-decoration: none; color: #007bff;">
+                KishoreLenka
+            </a>
+        </li>
+    </ul>
+</footer>
+
+<footer>
+    <p>Contact: Kishore Lenka</p>
+</footer>
+
+</body>
+</html>
