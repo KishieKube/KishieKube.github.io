@@ -652,7 +652,28 @@
         html {
             scroll-behavior: smooth;
         }
+        .logo-container {
+    display: flex;
+    flex-direction: column;
+}
 
+.logo-links {
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.logo-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+}
+
+.logo-links a:hover {
+    color: var(--accent-color);
+}
+
+.logo-links i {
+    margin-right: 4px;
+}
 
         /* Light Mode Theme */
         body.light-mode {
@@ -765,7 +786,19 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Kishore Lenka</div>
+           <!-- <div class="logo">Kishore Lenka</div> -->
+            <div class="logo-container">
+            <div class="logo" style="font-size: 2.5rem;">Kishore Lenka</div>
+                <div class="logo-links">
+                    <a href="https://yourwebsite.com" target="_blank">
+                        <i class="fas fa-globe"></i> My Website
+                    </a>
+                    <span>|</span>
+                    <a href="https://vaniai.io" target="_blank">
+                        <i class="fas fa-brain"></i> Vani AI
+                    </a>
+                </div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
