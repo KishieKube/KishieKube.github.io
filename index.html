@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishore Lenka - AI Solutions Leader & Sr. Delivery Manager</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kishore Lenka - AI Transformation Leader | Agentic AI | Telecom &amp; Cloud Executive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -40,8 +42,8 @@
             height: 100%;
             z-index: -1;
             background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
         }
 
         /* Navigation */
@@ -586,7 +588,7 @@
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-menu {
                 display: flex;
             }
@@ -650,250 +652,349 @@
         html {
             scroll-behavior: smooth;
         }
+
+
+        /* Light Mode Theme */
+        body.light-mode {
+            --primary-color: #f8fafc;
+            --secondary-color: #ffffff;
+            --accent-color: #2563eb;
+            --accent-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+            --text-light: #0f172a;
+            --text-gray: #475569;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --border-color: rgba(37, 99, 235, 0.18);
+        }
+
+        body,
+        .navbar,
+        .skill-category,
+        .experience-item,
+        .project-card,
+        .contact-info,
+        .contact-form,
+        .stat-item,
+        .footer {
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body.light-mode .navbar {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        body.light-mode .bg-animation {
+            background: radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+        }
+
+        .logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem !important;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--text-light);
+            border-radius: 999px;
+            padding: 0.55rem 0.9rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.18);
+        }
+
+        .leadership-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .leadership-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .leadership-list {
+            list-style: none;
+        }
+
+        .leadership-list li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .leadership-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap" rel="stylesheet" />
 </head>
+
 <body>
     <div class="bg-animation"></div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo" style="font-size: 2.5rem;">Kishore Lenka</div>             
+            <div class="logo">Kishore Lenka</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#ai-leadership">AI Leadership</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="nav-actions"><button aria-label="Toggle light and dark mode" class="theme-toggle"
+                    id="themeToggle" type="button"><i class="fas fa-sun"></i><span
+                        class="theme-label">Light</span></button>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero" id="home">
         <div class="hero-content fade-in">
-            <h1 class="hero-title">AI Solutions Leader & Delivery Manager</h1>
-            <p class="hero-subtitle">Transforming businesses through Generative AI, Cloud Technologies & Strategic Program Delivery</p>
+            <h1 class="hero-title">AI Solutions Leader & Executive Delivery Manager
+            </h1>
+
+            <p class="hero-subtitle">Driving Enterprise AI, Agentic Automation, Cloud-Native Telecom &amp; Delivery
+                Excellence</p>
             <p class="hero-description">
-                Accomplished Senior Manager with extensive experience in AI-driven transformation, 
-                program delivery, and telecommunications. Specialized in leveraging Generative AI, 
-                LLMs, and cloud technologies to drive innovation and deliver exceptional results.
+                AI and engineering leader with 20+ years across Telecom, Cloud and Enterprise AI.
+                I help organizations convert AI strategy into scalable platforms, intelligent automation,
+                stronger engineering productivity and measurable business outcomes.
             </p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">
+                <a class="btn btn-primary" href="#contact">
                     <i class="fas fa-envelope"></i>
                     Get In Touch
                 </a>
-                <a href="https://github.com/kishiekube" target="_blank" class="btn btn-secondary">
+                <a class="btn btn-secondary" href="https://github.com/kishiekube" target="_blank">
                     <i class="fab fa-github"></i>
                     View on GitHub
                 </a>
             </div>
         </div>
     </section>
-
     <!-- About Section -->
-    <section id="about" class="section">
+    <section class="section" id="about">
         <h2 class="section-title fade-in">About Me</h2>
         <div class="about-content">
             <div class="about-text fade-in">
                 <p>
-                    As a highly accomplished Senior Manager, I bring extensive experience in program delivery, 
-                    AI-driven transformation, and telecommunications solutions. My expertise spans across 
-                    Generative AI integration, cloud migration, and strategic program management.
+                    I am an AI transformation and senior delivery leader with 20+ years of experience across Telecom,
+                    Cloud and Enterprise AI, combining business leadership with hands-on understanding of LLMs, RAG,
+                    Agentic AI and cloud-native platforms.
                 </p>
                 <p>
-                    I have successfully led transformative projects for major clients including Avid Technologies, 
-                    Samsung Korea, and Verizon USA, achieving remarkable efficiency improvements and customer 
-                    satisfaction scores. My technical proficiency includes AI automation tools like LangChain, 
-                    CrewAI, and comprehensive cloud platforms.
+                    I lead AI adoption, Agentic AI platforms, enterprise automation and large-scale engineering teams,
+                    bridging business strategy, product vision, AI innovation and delivery execution.
                 </p>
                 <p>
-                    With a passion for innovation and a track record of delivering results, I specialize in 
-                    modernizing content platforms through strategic AI integration and ensuring robust, 
-                    secure networking solutions across diverse product lines.
+                    My strength is building outcome-driven technology organizations that can deliver complex telecom,
+                    RAN, Private 5G and AI-led transformation programs with strong customer governance and execution
+                    discipline.
                 </p>
             </div>
             <div class="stats fade-in">
-                <div class="stat-item">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Efficiency Boost with AI</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">20%</div>
-                    <div class="stat-label">Delivery Improvement</div>
-                </div>
                 <div class="stat-item">
                     <div class="stat-number">20+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">100M+</div>
-                    <div class="stat-label">Dollar Projects Led</div>
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Engineers Led</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$100M+</div>
+                    <div class="stat-label">Programs Managed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">AI</div>
+                    <div class="stat-label">Transformation &amp; Agentic AI Specialist</div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="section" id="ai-leadership">
+        <h2 class="section-title fade-in">AI Leadership &amp; Innovation</h2>
+        <div class="leadership-card fade-in">
+            <h3><i class="fas fa-brain"></i> Enterprise AI Leadership</h3>
+            <ul class="leadership-list">
+                <li>Led adoption of Generative AI and Agentic AI solutions across engineering and delivery
+                    organizations.</li>
+                <li>Designed enterprise AI architectures leveraging LLMs, RAG, multi-agent systems and workflow
+                    automation.</li>
+                <li>Driving development of Autonomous SRE and AI Operations platforms for enterprise environments.</li>
+                <li>Established AI-first delivery practices to improve productivity, quality and operational efficiency.
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
+    <section class="section" id="skills">
         <h2 class="section-title fade-in">Core Competencies</h2>
         <div class="skills-grid">
             <div class="skill-category fade-in">
-                <h3><i class="fas fa-robot"></i> AI & Machine Learning</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Generative AI</span>
-                    <span class="skill-tag">LLMs</span>
-                    <span class="skill-tag">LangChain</span>
-                    <span class="skill-tag">CrewAI</span>
-                    <span class="skill-tag">RAG</span>
-                    <span class="skill-tag">NLP</span>
-                    <span class="skill-tag">AI Automation</span>
-                    <span class="skill-tag">n8n</span>
-                    <span class="skill-tag">Make.ai</span>
-                </div>
+                <h3><i class="fas fa-robot"></i> Agentic AI &amp; Enterprise AI</h3>
+                <div class="skill-tags"><span class="skill-tag">Generative AI</span><span
+                        class="skill-tag">LLMs</span><span class="skill-tag">Agentic AI</span><span
+                        class="skill-tag">Autonomous Agents</span><span class="skill-tag">LangGraph</span><span
+                        class="skill-tag">LangChain</span><span class="skill-tag">CrewAI</span><span
+                        class="skill-tag">RAG</span><span class="skill-tag">NLP</span><span
+                        class="skill-tag">OpenAI</span></div>
             </div>
             <div class="skill-category fade-in">
-                <h3><i class="fas fa-cloud"></i> Cloud Technologies</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">GCP</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">Red Hat OCP</span>
-                    <span class="skill-tag">Containers</span>
-                    <span class="skill-tag">Grafana</span>
-                    <span class="skill-tag">Cloud Migration</span>
-                </div>
+                <h3><i class="fas fa-wand-magic-sparkles"></i> AI Transformation &amp; Automation</h3>
+                <div class="skill-tags"><span class="skill-tag">AI Strategy</span><span class="skill-tag">Enterprise
+                        Automation</span><span class="skill-tag">AI Operations</span><span class="skill-tag">AI
+                        Governance</span><span class="skill-tag">n8n</span><span class="skill-tag">Make.ai</span><span
+                        class="skill-tag">Workflow Automation</span><span class="skill-tag">AI Productivity</span></div>
             </div>
             <div class="skill-category fade-in">
-                <h3><i class="fas fa-project-diagram"></i> Program Management</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Strategic Planning</span>
-                    <span class="skill-tag">Stakeholder Management</span>
-                    <span class="skill-tag">Budget Management</span>
-                    <span class="skill-tag">Risk Assessment</span>
-                    <span class="skill-tag">Agile/Scrum</span>
-                    <span class="skill-tag">Program Governance</span>
-                    <span class="skill-tag">Resource Allocation</span>
-                </div>
+                <h3><i class="fas fa-tower-broadcast"></i> Telecom, RAN &amp; Private 5G</h3>
+                <div class="skill-tags"><span class="skill-tag">RAN</span><span class="skill-tag">Private 5G</span><span
+                        class="skill-tag">5G Core</span><span class="skill-tag">VoLTE</span><span
+                        class="skill-tag">VoIP</span><span class="skill-tag">IPSec IKEv2</span><span
+                        class="skill-tag">FreeSWITCH</span><span class="skill-tag">Kamailio</span><span
+                        class="skill-tag">OpenSIPS</span></div>
             </div>
             <div class="skill-category fade-in">
-                <h3><i class="fas fa-network-wired"></i> Telecommunications</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">5G Solutions</span>
-                    <span class="skill-tag">VoIP</span>
-                    <span class="skill-tag">FreeSWITCH</span>
-                    <span class="skill-tag">Asterisk</span>
-                    <span class="skill-tag">Kamailio</span>
-                    <span class="skill-tag">OpenSIPS</span>
-                    <span class="skill-tag">VoLTE</span>
-                    <span class="skill-tag">IPSec IKEv2</span>
-                </div>
+                <h3><i class="fas fa-cloud"></i> Cloud Native Platforms</h3>
+                <div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Azure</span><span
+                        class="skill-tag">GCP</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">Red
+                        Hat OCP</span><span class="skill-tag">Containers</span><span
+                        class="skill-tag">Prometheus</span><span class="skill-tag">Grafana</span><span
+                        class="skill-tag">Cloud Migration</span></div>
             </div>
             <div class="skill-category fade-in">
-                <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">JIRA</span>
-                    <span class="skill-tag">Confluence</span>
-                    <span class="skill-tag">MS Project</span>
-                    <span class="skill-tag">Power BI</span>
-                    <span class="skill-tag">SharePoint</span>
-                    <span class="skill-tag">Teams</span>
-                    <span class="skill-tag">Slack</span>
-                    <span class="skill-tag">Git</span>
-                </div>
+                <h3><i class="fas fa-briefcase"></i> Executive Delivery Leadership</h3>
+                <div class="skill-tags"><span class="skill-tag">Strategic Planning</span><span
+                        class="skill-tag">Stakeholder Governance</span><span class="skill-tag">P&amp;L
+                        Awareness</span><span class="skill-tag">Budget Management</span><span class="skill-tag">Risk
+                        Management</span><span class="skill-tag">Resource Strategy</span><span
+                        class="skill-tag">Customer Engagement</span></div>
             </div>
             <div class="skill-category fade-in">
-                <h3><i class="fas fa-handshake"></i> Leadership & Soft Skills</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Problem-solving</span>
-                    <span class="skill-tag">Collaboration</span>
-                    <span class="skill-tag">Adaptability</span>
-                    <span class="skill-tag">Strategic Thinking</span>
-                    <span class="skill-tag">Negotiation</span>
-                </div>
+                <h3><i class="fas fa-tools"></i> Tools &amp; Platforms</h3>
+                <div class="skill-tags"><span class="skill-tag">JIRA</span><span
+                        class="skill-tag">Confluence</span><span class="skill-tag">MS Project</span><span
+                        class="skill-tag">Power BI</span><span class="skill-tag">SharePoint</span><span
+                        class="skill-tag">Teams</span><span class="skill-tag">Slack</span><span
+                        class="skill-tag">Git</span></div>
             </div>
         </div>
     </section>
-
     <!-- Experience Section -->
-    <section id="experience" class="section">
+    <section class="section" id="experience">
         <h2 class="section-title fade-in">Professional Experience</h2>
         <div class="experience-timeline">
-             <div class="experience-item fade-in">
+            <div class="experience-item fade-in">
                 <div class="experience-header">
                     <div>
-                        <div class="experience-role">Senior Delivery Manager</div>
+                        <div class="experience-role">Senior Delivery Manager
+                        </div>
                         <div class="experience-company">Tieto, Bangalore</div>
                     </div>
                     <div class="experience-duration">Nov 2025 - Present</div>
                 </div>
                 <p class="experience-description">
-                    Senior Delivery Manager with focus on AI, Telecom RAN, Delivery and stakeholder governance.
+                    Leading AI-enabled telecom delivery, customer governance and global engineering execution.
                 </p>
                 <ul class="experience-achievements">
-                    <li>Led multi-million-euro Ericsson Private 5G, RAN and cloud engagements, managing 40+ engineers across India and Sweden with end-to-end delivery accountability.</li>
-                    <li>Scaled India delivery capabilities through strategic workforce expansion, competency building, and ownership transition of critical telecom programs.</li>
-                    <li>Drove AI-led automation and operational excellence initiatives, improving engineering productivity and accelerating delivery outcomes.</li>
-                    <!-- <li>Leading end-to-end delivery of Ericsson Private 5G (EP5G) programs, managing distributed teams across India and Sweden while ensuring delivery excellence and customer satisfaction</li>
-                    <li>Scaled and established India delivery capabilities for Ericsson engagements through strategic hiring, onboarding, competency development, and transition planning</li>
-                    <li>Improved delivery predictability and operational efficiency through governance frameworks, stakeholder management, risk mitigation, and data-driven delivery reviews</li>
-                    <li>Partnered with Ericsson leadership to drive release planning, resource optimization, and execution of critical 5G Core and Cloud Native initiatives</li>
-                    <li>Championed AI adoption and automation initiatives within delivery organizations, promoting productivity improvements and innovation-led engineering practices</li>
-                    <li>Managed multi-million-dollar customer engagements, balancing delivery commitments, resource planning, financial performance, and long-term business objectives</li>
-                    <li>Built strong customer relationships through proactive communication, escalation management, and consistent focus on delivery quality and business outcomes</li>
-                    <li>Led cross-functional teams across Cloud, DevOps, Private 5G, and Telecom domains, enabling successful execution of complex transformation programs</li> -->
-
+                    <li>Leading strategic transformation programs with end-to-end
+                        accountability for delivery excellence, customer success, revenue realization, margin
+                        performance, and business outcomes</li>
+                    <li>Driving enterprise-wide AI adoption, AI literacy, and automation initiatives, enabling
+                        engineering teams to leverage Agentic AI for improved productivity,
+                        innovation, and operational efficiency.</li>
+                    <li>Building and scaling high-performing global engineering organizations across India and Europe
+                        through workforce expansion, competency development, succession planning, and leadership
+                        coaching.</li>
+                    <li>Partnering with executive leadership and customers to define AI, Telecom, and Cloud
+                        transformation roadmaps, fostering innovation, capability growth, and sustainable business value
+                        creation.</li>
                 </ul>
             </div>
-            
             <div class="experience-item fade-in">
                 <div class="experience-header">
                     <div>
-                        <div class="experience-role">Program Manager - Delivery</div>
+                        <div class="experience-role">Delivery Manager</div>
                         <div class="experience-company">Encora Innovation Lab, Bangalore</div>
                     </div>
                     <div class="experience-duration">Mar 2024 - Nov 2025</div>
                 </div>
                 <p class="experience-description">
-                    Leading program delivery with focus on AI integration, secure networking, and stakeholder governance.
+                    Leading program delivery with focus on AI integration, secure networking, and stakeholder
+                    governance.
                 </p>
                 <ul class="experience-achievements">
-                    <li>Led program delivery for Avid Technologies, enhancing AVID Media Composer with Generative AI integration</li>
-                    <li>Orchestrated AI-driven video semantic search and speaker recognitions integration, realizing a 95% increase in operational efficiency</li>
+                    <li>Led program delivery for Avid Technologies, enhancing AVID Media Composer with Generative AI
+                        integration</li>
+                    <li>Orchestrated AI-driven video semantic search and speaker recognitions integration, realizing a
+                        95% increase in operational efficiency</li>
                     <li>Directed IPSec IKEv2 integration into ADTRAN OS across various product lines</li>
                     <li>Enhanced delivery predictability by 20% through stakeholder cadences and governance models</li>
                 </ul>
             </div>
-
             <div class="experience-item fade-in">
                 <div class="experience-header">
                     <div>
-                        <div class="experience-role">Project Manager - Telecom & Voice Solutions</div>
+                        <div class="experience-role">Project Manager - Telecom &amp; Voice Solutions</div>
                         <div class="experience-company">Ecosmob Technologies, Ahmedabad</div>
                     </div>
                     <div class="experience-duration">Feb 2022 - Nov 2023</div>
                 </div>
                 <p class="experience-description">
-                    Managed comprehensive VoIP/Telecom projects with focus on governance structures and customer satisfaction.
+                    Managed comprehensive VoIP/Telecom projects with focus on governance structures and customer
+                    satisfaction.
                 </p>
                 <ul class="experience-achievements">
                     <li>Delivered diverse VoIP/Telecom solutions using FreeSWITCH, Asterisk, Kamailio, and OpenSIPS</li>
-                    <li>Achieved 20% improvement in customer satisfaction through quality-controlled delivery processes</li>
+                    <li>Achieved 20% improvement in customer satisfaction through quality-controlled delivery processes
+                    </li>
                     <li>Contributed to multi-million dollar client acquisitions with technical solution inputs</li>
                     <li>Successfully managed migration of on-premise FreeSWITCH servers to AWS cloud</li>
                 </ul>
             </div>
-
             <div class="experience-item fade-in">
                 <div class="experience-header">
                     <div>
@@ -903,7 +1004,8 @@
                     <div class="experience-duration">Feb 2021 - Feb 2022</div>
                 </div>
                 <p class="experience-description">
-                    Spearheaded 5G solution integration and deployment for major clients including Samsung Korea and Verizon USA.
+                    Spearheaded 5G solution integration and deployment for major clients including Samsung Korea and
+                    Verizon USA.
                 </p>
                 <ul class="experience-achievements">
                     <li>Led deployment of 5G compact core components (AuSF, UDM, UDR, PCF, PCRF, AMF)</li>
@@ -912,26 +1014,26 @@
                     <li>Achieved 95% on-time delivery for 5G compact core deployments in cloud environments</li>
                 </ul>
             </div>
-
             <div class="experience-item fade-in">
                 <div class="experience-header">
                     <div>
-                        <div class="experience-role">Project Manager - System Software & R&D</div>
+                        <div class="experience-role">Project Manager - System Software &amp; R&amp;D</div>
                         <div class="experience-company">Sasken Technologies, Bangalore</div>
                     </div>
                     <div class="experience-duration">May 2017 - Feb 2021</div>
                 </div>
                 <p class="experience-description">
-                    Managed comprehensive programs focused on Mobile Satellite Terminals and Terrestrial Terminal Applications.
+                    Managed comprehensive programs focused on Mobile Satellite Terminals and Terrestrial Terminal
+                    Applications.
                 </p>
                 <ul class="experience-achievements">
-                    <li>Successfully delivered Mobile Satellite Equipment and Terrestrial Terminal Application programs</li>
+                    <li>Successfully delivered Mobile Satellite Equipment and Terrestrial Terminal Application programs
+                    </li>
                     <li>Oversaw firmware development with rigorous hardware validation and software integration</li>
                     <li>Optimized resource allocation and budgeting to meet project objectives</li>
                     <li>Implemented streamlined firmware development processes</li>
                 </ul>
             </div>
-
             <div class="experience-item fade-in">
                 <div class="experience-header">
                     <div>
@@ -941,7 +1043,8 @@
                     <div class="experience-duration">May 2010 - May 2017</div>
                 </div>
                 <p class="experience-description">
-                    Led technical teams in Routing, Switching, SBC, BGF and VoLTE projects with Ericsson & Intel partnerships.
+                    Led technical teams in Routing, Switching, SBC, BGF and VoLTE projects with Ericsson &amp; Intel
+                    partnerships.
                 </p>
                 <ul class="experience-achievements">
                     <li>Provided technical leadership for network optimization and enhancement projects</li>
@@ -952,153 +1055,134 @@
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title fade-in">Key Projects & Achievements</h2>
+    <section class="section" id="projects">
+        <h2 class="section-title fade-in">Key Projects &amp; Achievements</h2>
         <div class="projects-grid">
             <div class="project-card fade-in">
                 <div class="project-content">
-                    <h3 class="project-title">AI-Powered Content Management Platform</h3>
+                    <h3 class="project-title">Enterprise Autonomous SRE Platform</h3>
                     <p class="project-description">
-                        Led the integration of Generative AI into Avid Media Composer, implementing semantic NLP 
-                        and AI-driven search capabilities that resulted in 95% efficiency improvement.
+                        Architecting an Agentic AI platform for autonomous incident detection, diagnosis, RCA generation
+                        and human-approved remediation across enterprise cloud environments.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Generative AI</span>
-                        <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">Semantic Search</span>
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">Content Management</span>
-                    </div>
-                    <!-- <div class="project-links">
-                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            More on GitHub
-                        </a>
-                    </div> -->
+                    <div class="project-tech"><span class="tech-tag">Agentic AI</span><span
+                            class="tech-tag">LangGraph</span><span class="tech-tag">OpenAI</span><span
+                            class="tech-tag">Kubernetes</span><span class="tech-tag">Prometheus</span><span
+                            class="tech-tag">Autonomous SRE</span></div>
                 </div>
             </div>
-
             <div class="project-card fade-in">
                 <div class="project-content">
-                    <h3 class="project-title">5G Core Network Deployment</h3>
+                    <h3 class="project-title">AI Support Resolution Agent</h3>
                     <p class="project-description">
-                        Orchestrated deployment of 5G compact core components for Samsung Korea & Verizon USA 
-                        across multiple cloud platforms, achieving 95% on-time delivery rate.
+                        Built an enterprise customer support agent with RAG, tool execution, escalation workflows and
+                        safety controls for reliable customer operations.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">5G Core</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Red Hat OCP</span>
-                        <span class="tech-tag">Network Functions</span>
-                    </div>
-                    <!-- <div class="project-links">
-                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            More on GitHub
-                        </a>
-                    </div> -->
+                    <div class="project-tech"><span class="tech-tag">RAG</span><span class="tech-tag">LLMs</span><span
+                            class="tech-tag">Tool Calling</span><span class="tech-tag">Escalation</span><span
+                            class="tech-tag">Safety Controls</span></div>
                 </div>
             </div>
-
             <div class="project-card fade-in">
                 <div class="project-content">
-                    <h3 class="project-title">Cloud Migration & VoIP Solutions</h3>
+                    <h3 class="project-title">Realtime Voice Translation AI</h3>
                     <p class="project-description">
-                        Successfully migrated on-premise FreeSWITCH servers with customer databases to AWS cloud, 
-                        improving system reliability and scalability for telecom clients.
+                        Developed a multilingual voice translation system with STT, LLM-based translation, TTS and
+                        adaptive context handling for real-time communication.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS Cloud</span>
-                        <span class="tech-tag">FreeSWITCH</span>
-                        <span class="tech-tag">VoIP</span>
-                        <span class="tech-tag">Migration</span>
-                        <span class="tech-tag">Database</span>
-                    </div>
-                    <!-- <div class="project-links">
-                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            More on GitHub
-                        </a>
-                    </div> -->
+                    <div class="project-tech"><span class="tech-tag">STT</span><span class="tech-tag">LLM
+                            Translation</span><span class="tech-tag">TTS</span><span class="tech-tag">Realtime
+                            AI</span><span class="tech-tag">Voice Agents</span></div>
                 </div>
             </div>
-
             <div class="project-card fade-in">
                 <div class="project-content">
                     <h3 class="project-title">AI Automation Framework</h3>
                     <p class="project-description">
-                        Developed comprehensive AI automation solutions using LangChain, CrewAI, and workflow 
+                        Developed comprehensive AI automation solutions using LangChain, Langgraph, CrewAI, and workflow
                         automation tools to streamline business processes and improve operational efficiency.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">CrewAI</span>
-                        <span class="tech-tag">n8n</span>
-                        <span class="tech-tag">Make.ai</span>
-                        <span class="tech-tag">Automation</span>
-                    </div>
-                    <!-- <div class="project-links">
-                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            More on GitHub
-                        </a>
-                    </div> -->
+                    <div class="project-tech"><span class="tech-tag">AI Realtime Agent</span><span
+                            class="tech-tag">OpenAI
+                            Realtime</span><span class="tech-tag">Claude Code</span><span class="tech-tag">SDLC
+                            Automation</span><span class="tech-tag">Agentic Engineering</span></div>
                 </div>
             </div>
-
             <div class="project-card fade-in">
                 <div class="project-content">
-                    <h3 class="project-title">Secure Network Integration</h3>
+                    <h3 class="project-title">AI-Powered Content Management Platform</h3>
                     <p class="project-description">
-                        Directed the integration of IPSec IKEv2 into ADTRAN OS across various product lines, 
-                        ensuring robust and secure networking capabilities for enterprise clients.
+                        Led Generative AI integration into Avid Media Composer, enabling semantic NLP search and speaker
+                        recognition with significant efficiency improvement.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">IPSec IKEv2</span>
-                        <span class="tech-tag">Network Security</span>
-                        <span class="tech-tag">ADTRAN OS</span>
-                        <span class="tech-tag">Integration</span>
-                        <span class="tech-tag">Enterprise</span>
-                    </div>
-                    <!-- <div class="project-links">
-                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            More on GitHub
-                        </a>
-                    </div> -->
+                    <div class="project-tech"><span class="tech-tag">Generative AI</span><span
+                            class="tech-tag">NLP</span><span class="tech-tag">Semantic Search</span><span
+                            class="tech-tag">LLMs</span><span class="tech-tag">Content Management</span></div>
                 </div>
             </div>
-
             <div class="project-card fade-in">
                 <div class="project-content">
-                    <h3 class="project-title">Mobile Satellite Terminal Systems</h3>
+                    <h3 class="project-title">5G Core, RAN &amp; Cloud Network Delivery</h3>
                     <p class="project-description">
-                        Managed end-to-end development of Mobile Satellite Equipment and Terrestrial Terminal 
-                        Applications with focus on firmware optimization and hardware-software integration.
+                        Led telecom transformation programs across Private 5G, RAN, 5G Core and cloud-native network
+                        deployments for global customers.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Satellite Systems</span>
-                        <span class="tech-tag">Firmware</span>
-                        <span class="tech-tag">Embedded Systems</span>
-                        <span class="tech-tag">Hardware Integration</span>
-                        <span class="tech-tag">Mobile Terminals</span>
-                    </div>
-                    <!-- <div class="project-links">
-                        <a href="https://github.com/kishiekube" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            More on GitHub
-                        </a>
-                    </div> -->
+                    <div class="project-tech"><span class="tech-tag">Private 5G</span><span
+                            class="tech-tag">RAN</span><span class="tech-tag">5G Core</span><span
+                            class="tech-tag">AWS</span><span class="tech-tag">Kubernetes</span><span
+                            class="tech-tag">Red Hat OCP</span></div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="section">
+
+
+
+    <section class="section" id="certifications">
+        <h2 class="section-title fade-in">Executive Education & Professional Certifications</h2>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-brain"></i> AI &amp; Agentic Systems</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag"><b>IIT Madras </b> – Executive Agentic AI &amp; AI Applications</span>
+                    <span class="skill-tag">Agentic AI Systems</span>
+                    <span class="skill-tag">Enterprise AI Architecture</span>
+
+                </div>
+
+                <h3><i class="fas fa-briefcase"></i> Business & Executive Leadership</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag"><b>IIM Kozhikode</b> – Executive Management & Business Strategy</span>
+                    <span class="skill-tag">Strategic Leadership</span>
+                    <span class="skill-tag">Business Transformation</span>
+                    <span class="skill-tag">Executive Decision Making</span>
+
+                </div>
+
+                <h3><i class="fas fa-project-diagram"></i> Program & Delivery Excellence</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Project Management Professional (PMP)</span>
+                    <span class="skill-tag">Certified Scrum Master (CSM)</span>
+                    <span class="skill-tag">Agile Delivery</span>
+                    <span class="skill-tag">Program Governance</span>
+                    <span class="skill-tag">Portfolio Management</span>
+                </div>
+                <h3><i class="fas fa-cloud"></i> Cloud & Technology</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS Solutions Architect</span>
+                    <span class="skill-tag">Cloud Architecture</span>
+                    <span class="skill-tag">Cloud Native Platforms</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Enterprise Transformation</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
         <h2 class="section-title fade-in">Let's Connect</h2>
         <div class="contact-content">
             <div class="contact-info fade-in">
@@ -1123,40 +1207,38 @@
                     <i class="fab fa-github"></i>
                     <a href="https://github.com/kishiekube" target="_blank">kishorelenka</a>
                 </div>
-                
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/kishorelenka" target="_blank" class="social-link">
+                    <a class="social-link" href="https://www.linkedin.com/in/kishorelenka" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/kishiekube" target="_blank" class="social-link">
+                    <a class="social-link" href="https://github.com/kishiekube" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:kishore.lenka@gmail.com" class="social-link">
+                    <a class="social-link" href="mailto:kishore.lenka@gmail.com">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
-
             <div class="contact-form fade-in">
                 <h3 style="margin-bottom: 1.5rem; color: var(--accent-color);">Send a Message</h3>
                 <form>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input id="name" name="name" required="" type="text" />
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input id="email" name="email" required="" type="email" />
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input id="subject" name="subject" required="" type="text" />
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" required=""></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <button class="btn btn-primary" style="width: 100%;" type="submit">
                         <i class="fas fa-paper-plane"></i>
                         Send Message
                     </button>
@@ -1164,14 +1246,13 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-            <p>&copy; 2024 Kishore Lenka. All rights reserved. | AI Solutions Leader & Program Manager</p>
+            <p>© 2026 Kishore Lenka. All rights reserved. | AI Transformation Leader &amp; Agentic AI / Telecom
+                Executive</p>
         </div>
     </footer>
-
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1216,18 +1297,18 @@
 
         // Contact form handling
         const contactForm = document.querySelector('form');
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
             const subject = formData.get('subject');
             const message = formData.get('message');
-            
+
             // Create mailto link
             const mailtoLink = `mailto:kishore.lenka@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-            
+
             window.location.href = mailtoLink;
         });
 
@@ -1257,7 +1338,7 @@
         function typeWriter(element, text, speed = 100) {
             let i = 0;
             element.innerHTML = '';
-            
+
             function type() {
                 if (i < text.length) {
                     element.innerHTML += text.charAt(i);
@@ -1314,8 +1395,38 @@
             .nav-links a.active::after {
                 width: 100%;
             }
+
+            body.light-mode .nav-links.active {
+                background: rgba(255, 255, 255, 0.96);
+            }
         `;
         document.head.appendChild(style);
+
+
+        // Light/Dark theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+        const themeLabel = themeToggle ? themeToggle.querySelector('.theme-label') : null;
+
+        function setTheme(mode) {
+            document.body.classList.toggle('light-mode', mode === 'light');
+            if (themeIcon && themeLabel) {
+                themeIcon.className = mode === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+                themeLabel.textContent = mode === 'light' ? 'Dark' : 'Light';
+            }
+            localStorage.setItem('portfolio-theme', mode);
+        }
+
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+        setTheme(savedTheme);
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const nextTheme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+                setTheme(nextTheme);
+            });
+        }
     </script>
 </body>
+
 </html>
